@@ -9,7 +9,8 @@
 
             <div class="field">
               <div class="control">
-                <%= f.input :email, required: true, autofocus: true %>
+                <%= f.input :email, required: true, autofocus: true,
+                input_html: { class: "input" }, wrapper: false, input_label: { class: "label"} %>
                 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
                   <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
                 <% end %>
